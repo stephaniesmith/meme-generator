@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/stephaniesmith/meme-generator#readme",
   "devDependencies": {
-    "webpack": "^4.10.1"
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4"
   }
 }
