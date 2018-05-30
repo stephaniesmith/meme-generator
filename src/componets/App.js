@@ -6,7 +6,8 @@ export default class App extends Component {
         super();
 
         this.state = {
-            image: null
+            image: null,
+            text: null
         }
     }
 
@@ -20,12 +21,16 @@ export default class App extends Component {
         reader.readAsDataURL(target.files[0]);
     
         reader.onload = () => {
-          this.setState({ image: reader.result });
+            this.setState({ image: reader.result });
         };
-      }
+    }
+
+    handleTextChange({ target }) {
+        this.setState({ text: target.value });
+    }
 
     render() {
-        const { image } = this.state;
+        const { image, text } = this.state;
 
         return (
             <section>
@@ -57,17 +62,20 @@ export default class App extends Component {
                 <div>
                     <input
                         type="text"
+                        placeholder="Write you meme here"
+                        onChange={event => this.handleTextChange(event)}
                     />
                 </div>
-                <div>
+                {/* <div>
                     <input
                         type="text"
                     />
-                </div>
+                </div> */}
                 <div>
                     <button>Export</button>
                 </div>
                 <div>
+                    <h1>{text}</h1>
                     <img src={image}/>
                 </div>
             </section>
