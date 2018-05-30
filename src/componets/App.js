@@ -8,7 +8,8 @@ export default class App extends Component {
         this.state = {
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbviSJcx2a4U01BRinV9aTIrdxUBzy9ZCHs2WdNG49aanJilZG',
             text: 'Cats!',
-            color: '#000000'
+            color: '#000000',
+            font: 'san-serif'
         }
     }
 
@@ -35,7 +36,7 @@ export default class App extends Component {
     }
 
     render() {
-        const { image, text, color } = this.state;
+        const { image, text, color, font } = this.state;
 
         return (
             <section>
@@ -81,7 +82,7 @@ export default class App extends Component {
                     <button>Export</button>
                 </div>
                 <div>
-                    <h1 style={{color}}>{text}</h1>
+                    <h1 style={{ color }}>{text}</h1>
                     <img src={image}/>
                 </div>
             </section>
