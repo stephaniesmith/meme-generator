@@ -1,4 +1,35 @@
 import React, { Component } from 'react';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+    google: {
+      families: ['Nixie One', 'serif']
+    }
+  });
+
+  WebFont.load({
+    google: {
+      families: ['Comfortaa', 'sans-serif']
+    }
+  });
+
+  WebFont.load({
+    google: {
+      families: ['Megrim', 'sans-serif']
+    }
+  });
+
+  WebFont.load({
+    google: {
+      families: ['Righteous', 'slab-serif']
+    }
+  });
+
+  WebFont.load({
+    google: {
+      families: ['Alfa Slab One', 'slab-serif']
+    }
+  });
 
 export default class App extends Component {
     
@@ -9,7 +40,7 @@ export default class App extends Component {
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbviSJcx2a4U01BRinV9aTIrdxUBzy9ZCHs2WdNG49aanJilZG',
             text: 'Cats!',
             color: '#000000',
-            font: 'san-serif'
+            font: 'Nixie One'
         }
     }
 
@@ -82,7 +113,7 @@ export default class App extends Component {
                     <button>Export</button>
                 </div>
                 <div>
-                    <h1 style={{ color }}>{text}</h1>
+                    <h1 style={{ color, fontFamily: font }}>{text}</h1>
                     <img src={image}/>
                 </div>
             </section>
