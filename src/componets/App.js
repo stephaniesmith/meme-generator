@@ -22,7 +22,7 @@ export default class App extends Component {
                 <div>
                     <label>
                         Image Src:
-                        <input onChange={event => this.handleImageSrc(event)} Update Image/>
+                        <input onChange={event => this.handleImageSrc(event)}/>
                     </label>
                 </div>
                 <div>
