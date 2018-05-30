@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 export default class App extends Component {
     
     constructor() {
-        image: null
+        super();
+
+        this.state = {
+            image: null
+        }
     }
 
     handleImageSrc({ target }) {
