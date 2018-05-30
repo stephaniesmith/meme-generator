@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import WebFont from 'webfontloader';
+import dom2image from 'dom-to-image';
+import fileSaver from 'file-saver';
 
 let fonts = [['Nixie One', 'serif'], ['Comfortaa', 'san-serif'], ['Megrim', 'san-serif'], ['Righteous', 'san-serif'], ['Alfa Slab One', 'slab-serif']]
 
@@ -51,6 +53,12 @@ export default class App extends Component {
         this.setState({ selected: target.value });
     }
 
+    handleExport() {
+        dom2image.toBlob(this.imageExport).then(blob => {
+          fileSaver.saveAs(blob, 'meme.png');
+        });
+      }
+
     render() {
         const { image, text, color, fonts, selected } = this.state;
 
@@ -98,9 +106,9 @@ export default class App extends Component {
                     />
                 </div> */}
                 <div>
-                    <button>Export</button>
+                    <button onClick={() => this.handleExport()}>Export</button>
                 </div>
-                <div>
+                <div ref={node => this.imageExport = node}>
                     <h1 style={{ color, fontFamily: selected }}>{text}</h1>
                     <img src={image}/>
                 </div>
