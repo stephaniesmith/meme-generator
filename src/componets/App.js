@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 export default class App extends Component {
+    
+    constructor() {
+        image: null
+    }
+
+    handleImageSrc({ target }) {
+        this.setState({ image: target.value });
+    }
 
     render() {
         return (
@@ -41,6 +49,9 @@ export default class App extends Component {
                 </div>
                 <div>
                     <button>Export</button>
+                </div>
+                <div>
+                    <img src={image}/>
                 </div>
             </section>
         );
