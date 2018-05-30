@@ -30,6 +30,10 @@ export default class App extends Component {
         this.setState({ text: target.value });
     }
 
+    handleColorChange({ target }) {
+        this.setState({ color: target.value });
+    }
+
     render() {
         const { image, text, color } = this.state;
 
@@ -58,6 +62,7 @@ export default class App extends Component {
                 <div>
                     <input
                         type="color"
+                        onChange={event => this.handleColorChange(event)}
                     />
                 </div>
                 <div>
