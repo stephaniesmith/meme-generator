@@ -20,9 +20,12 @@
   "homepage": "https://github.com/stephaniesmith/meme-generator#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-react": "^7.8.2",
     "webpack": "^4.10.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
