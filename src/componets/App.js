@@ -15,12 +15,14 @@ export default class App extends Component {
     }
 
     render() {
+        const { image } = this.state;
+
         return (
             <section>
                 <div>
                     <label>
                         Image Src:
-                        <input/>
+                        <input onChange={event => this.handleImageSrc(event)} Update Image/>
                     </label>
                 </div>
                 <div>
