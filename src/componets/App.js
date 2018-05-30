@@ -111,8 +111,8 @@ export default class App extends Component {
                         />
                     </div> */}
                     </fieldset>
-                <div ref={node => this.imageExport = node}>
-                    <h1 style={{ color, fontFamily: selected, fontSize: size + 'em'}}>{text}</h1>
+                <div className="container" ref={node => this.imageExport = node}>
+                    <p style={{ color, fontFamily: selected, fontSize: size + 'em'}}>{text}</p>
                     <img src={image}/>
                 </div>
                 <div>

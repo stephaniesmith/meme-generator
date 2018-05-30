@@ -2,9 +2,26 @@ fieldset {
     width: 50%;
 }
 
-
-
 .row {
     display: flex;
     justify-content: space-evenly;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    border: 3px solid red;
+}
+
+.container {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+p {
+    position: absolute;
+    /* align-self: center; */
+    border: 3px solid red;
 }
