@@ -47,6 +47,10 @@ export default class App extends Component {
         this.setState({ color: target.value });
     }
 
+    handleFontChange({ target }) {
+        this.setState({ selected: target.value });
+    }
+
     render() {
         const { image, text, color, fonts, selected } = this.state;
 
@@ -68,7 +72,10 @@ export default class App extends Component {
                     </label>
                 </div>
                 <div>
-                    <select>
+                    <select 
+                        value={selected}
+                        onChange={event => this.handleFontChange(event)}
+                    >
                     {fonts.map(font => <option key={font[0]}> {font[0]}</option>)}
                     </select>
                 </div>
