@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 import dom2image from 'dom-to-image';
 import fileSaver from 'file-saver';
 
-let fonts = [['Nixie One', 'serif'], ['Comfortaa', 'san-serif'], ['Megrim', 'san-serif'], ['Righteous', 'san-serif'], ['Alfa Slab One', 'slab-serif']]
+let fonts = [['Nixie One', 'serif'], ['Comfortaa', 'san-serif'], ['Megrim', 'san-serif'], ['Righteous', 'san-serif'], ['Alfa Slab One', 'slab-serif']];
 
 fonts.map(font => {
   WebFont.load({
@@ -11,7 +11,7 @@ fonts.map(font => {
       families: font
     }
   });
-})
+});
 
 export default class App extends Component {
     
@@ -25,7 +25,7 @@ export default class App extends Component {
       fonts,
       selected: 'Nixie One',
       size: '3'
-    }
+    };
   }
 
   handleImageSrc({ target }) {
@@ -107,7 +107,7 @@ export default class App extends Component {
           </div>
         </fieldset>
         <div className="container" ref={node => this.imageExport = node}>
-          <p style={{ color, fontFamily: selected, fontSize: size + 'em'}}>{text}</p>
+          <p style={ { color, fontFamily: selected, fontSize: size + 'em' } }>{text}</p>
           <img src={image}/>
         </div>
         <div>
