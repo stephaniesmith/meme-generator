@@ -64,53 +64,56 @@ export default class App extends Component {
 
         return (
             <section>
-                <div>
-                    <label>
-                        Image Src:
-                        <input onChange={event => this.handleImageSrc(event)}/>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Image:
+                <h1>Pictures and Stuff</h1>
+                <fieldset>
+                    <div>
+                        <label>
+                            Image Src:
+                            <input onChange={event => this.handleImageSrc(event)}/>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Image:
+                            <input
+                                type="file"
+                                onChange={event => this.handleUpload(event)}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <select 
+                            value={selected}
+                            onChange={event => this.handleFontChange(event)}
+                        >
+                        {fonts.map(font => <option key={font[0]}> {font[0]}</option>)}
+                        </select>
+                    </div>
+                    <div>
                         <input
-                            type="file"
-                            onChange={event => this.handleUpload(event)}
+                            type="color"
+                            onChange={event => this.handleColorChange(event)}
                         />
-                    </label>
-                </div>
-                <div>
-                    <select 
-                        value={selected}
-                        onChange={event => this.handleFontChange(event)}
-                    >
-                    {fonts.map(font => <option key={font[0]}> {font[0]}</option>)}
-                    </select>
-                </div>
-                <div>
-                    <input
-                        type="color"
-                        onChange={event => this.handleColorChange(event)}
-                    />
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        placeholder="Write you meme here"
-                        onChange={event => this.handleTextChange(event)}
-                    />
-                </div>
-                {/* <div>
-                    <input
-                        type="text"
-                    />
-                </div> */}
-                <div>
-                    <button onClick={() => this.handleExport()}>Export</button>
-                </div>
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Write you meme here"
+                            onChange={event => this.handleTextChange(event)}
+                        />
+                    </div>
+                    {/* <div>
+                        <input
+                            type="text"
+                        />
+                    </div> */}
+                    </fieldset>
                 <div ref={node => this.imageExport = node}>
                     <h1 style={{ color, fontFamily: selected }}>{text}</h1>
                     <img src={image}/>
+                </div>
+                <div>
+                    <button onClick={() => this.handleExport()}>Export</button>
                 </div>
             </section>
         );
