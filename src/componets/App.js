@@ -69,7 +69,7 @@ export default class App extends Component {
                 </div>
                 <div>
                     <select>
-                    <option>Fonts</option>)}
+                    {fonts.map(font => <option key={font[0]}> {font[0]}</option>)}
                     </select>
                 </div>
                 <div>
