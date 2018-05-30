@@ -10,11 +10,11 @@ fieldset {
 img {
     max-width: 90%;
     height: auto;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     width: 100%;
@@ -23,5 +23,5 @@ img {
 p {
     position: absolute;
     /* align-self: center; */
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
