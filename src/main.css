@@ -1,3 +1,10 @@
 fieldset {
-    width: fit-content;
+    width: 50%;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
 }
